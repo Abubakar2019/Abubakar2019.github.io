@@ -16,7 +16,7 @@
             font-size: 50px;
             font-family:Arial, Helvetica, sans-serif;
             top: 0px;
-            left: 50%
+            left: 30%
         }
 
         p {
@@ -26,15 +26,16 @@
         }
     </style>
 
-    <script>
-        console.log('Javascript console');
+    <script typr='text/javascript'>
+        console.log('Welcome to capital quiz!');
+
         function welcome() {
             let txt;
-            let name = prompt("What is your name: ", "Bob");
+            let name = prompt("What is your name: ", "Enter your name");
             if (name == null || name == "") {
-                txt = "Try again. Click the";
+                txt = "Try again. Click the button";
             }   else{
-                txt = "Welcome to my website " + name + "!";
+                txt = "Welcome to capital quiz " + name + "!";
             }
             document.getElementById("alert").innerHTML = txt
         }
@@ -42,9 +43,10 @@
 </head>
 
 <body>
-    <h1>Hello World!</h1>
+    <h1>Capital Quiz</h1>
+    <img src="Worldmap.svg" alt="World Map" height="630" width="1357">
+
     <p>Click the button below for a welcome message</p>
-    
     <button onclick="welcome()">Greeting Message</button>
     <p id="alert"></p>
 </body>
