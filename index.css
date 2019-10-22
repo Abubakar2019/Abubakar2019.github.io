@@ -1,0 +1,22 @@
+body {
+    background-size: cover;
+    background-color: burlywood;
+    width: 1920px;
+    height: 1080px;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    position: relative;
+    font-size: 50px;
+    font-family:Arial, Helvetica, sans-serif;
+    top: 0px;
+    left: 30%
+}
+
+p {
+    color:black;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
