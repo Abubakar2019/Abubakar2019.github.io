@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 
-<script>
-
-</script>
-
 <head>
     <style>
         body {
             background-size: cover;
             background-color: burlywood;
-        }
-
-        #container {
-            width: inherit;
-            height: inherit;
+            width: 1920px;
+            height: 1080px;
             margin: 0;
             padding: 0;
         }
 
         h1 {
             position: relative;
-            font-size: 100px;
+            font-size: 50px;
             font-family:Arial, Helvetica, sans-serif;
             top: 0px;
             left: 50%
@@ -28,25 +21,32 @@
 
         p {
             color:black;
-            font-size: 100px;
+            font-size: 16px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
     </style>
 
     <script>
-        console.log('Hello');
-        function alert() {
-            document.getElementById("demo").innerHTML = alert('Pop up alert!')
+        console.log('Javascript console');
+        function welcome() {
+            let txt;
+            let name = prompt("What is your name: ", "Bob");
+            if (name == null || name == "") {
+                txt = "Try again. Click the";
+            }   else{
+                txt = "Welcome to my website " + name + "!";
+            }
+            document.getElementById("alert").innerHTML = txt
         }
     </script>    
 </head>
 
 <body>
-    <div id='container'>
-        <h1>Hello World!</h1>
-        <p>Click the button below to open a pop up alert</p>
-        <button onclick="alert()">Alert</button>;
-    </div>
+    <h1>Hello World!</h1>
+    <p>Click the button below for a welcome message</p>
+    
+    <button onclick="welcome()">Greeting Message</button>
+    <p id="alert"></p>
 </body>
 
 </html>
