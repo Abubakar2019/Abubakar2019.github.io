@@ -35,14 +35,17 @@
 
     <script>
         console.log('Hello');
-        alert('Hello')
+        function alert() {
+            document.getElementById("demo").innerHTML = alert('Pop up alert!')
+        }
     </script>    
 </head>
 
 <body>
     <div id='container'>
         <h1>Hello World!</h1>
-        <p>Body text</p>
+        <p>Click the button below to open a pop up alert</p>
+        <button onclick="alert()">Alert</button>;
     </div>
 </body>
 
