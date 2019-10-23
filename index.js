@@ -1,3 +1,9 @@
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#alert").hide();
+        });
+});
+
 console.log('Welcome to capital quiz!');
 
 function welcome() {

@@ -1,18 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #34cceb;
+    color: white;
+    padding: 15px;
+    text-align:center
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
 body {
     background-size: cover;
-    background-color: burlywood;
-    width: 1920px;
-    height: 1080px;
+    background-color: #35dbd3;
     margin: 0;
-    padding: 0;
+    padding: 0%; /* 56.25 is 16:9 Aspect Ratio, 75 is 4:3 Aspect Ratio*/
 }
 
 h1 {
-    position: relative;
     font-size: 50px;
     font-family:Arial, Helvetica, sans-serif;
-    top: 0px;
-    left: 30%
 }
 
 p {
