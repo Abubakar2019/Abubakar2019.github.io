@@ -46,7 +46,7 @@
 .bg{
     background-position:center center;
     background-repeat:no-repeat;
-    background-size:cover; 
+    background-size: cover; 
     color: white;
 }
 
@@ -56,7 +56,6 @@
 
 .animalsCover {
     background-image: url(https://www.zsl.org/sites/default/files/image/2014-01/Lucifer---Asian-Lion-ZSL-London-Zoo-WR.jpg);
-    <a href="">
 }
 
 .booksCover {
@@ -64,7 +63,7 @@
 }
 
 .filmCover {
-    background-image: url(http://cdn3.whatculture.com/images/2018/04/9995daf9adff2400-600x338.png);
+    background-image: url(https://4.bp.blogspot.com/-scpSekAk66w/XMCesCQF4vI/AAAAAAAABuQ/0q2fgoYXV5waswTB1PkYELeK5zbNWc9qwCKgBGAs/w914-h514-p-k-no-nu/avengers-endgame-characters-uhdpaper.com-4K-135.jpg);
 }
 
 .historyCover {
@@ -88,7 +87,6 @@
 }
 
 
-
 body {
     background-size: cover;
     background-color: #35dbd3;
@@ -107,6 +105,13 @@ h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     text-shadow: 3px 3px black;
+}
+
+h3 {
+    color: white;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
 }
 
 p {

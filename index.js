@@ -16,3 +16,11 @@ function welcome() {
     }
     document.getElementById("alert").innerHTML = txt
 }
+
+$("button").click(function(){
+    $.get("https://opentdb.com/api.php?amount=10&category=27&difficulty=medium", function(data){
+      alert();
+    });
+  });
+
+console.log(results[0])
