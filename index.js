@@ -32,11 +32,9 @@ function shuffle(a) {
 }
 
 //Animals quiz content
-
 $.get("https://opentdb.com/api.php?amount=10&category=27&difficulty=medium", function(data){
     for (let question = 0; question < 10; question++) {
-
-        $("#q" + (question + 1)).text( 'Question ' + (question + 1) + ': ' + data.results[question].question) 
+        document.getElementById("q" + (question + 1)).innerHTML = ( 'Question ' + (question + 1) + ': ' + data.results[question].question) 
        
         let allAnswers = [data.results[question].correct_answer , data.results[question].incorrect_answers[0], data.results[question].incorrect_answers[1], data.results[question].incorrect_answers[2]]
             //console.log(allAnswers)
@@ -47,10 +45,9 @@ $.get("https://opentdb.com/api.php?amount=10&category=27&difficulty=medium", fun
 
             let text = (index + 1) + '. ' + allAnswers[index];
             let name = 'RadioButton'; // + (index + 1);
-            let id = data.results[0].question + index;
+            let id = data.results[question].question + index;
 
-            let row = document.createElement('div');
-            document.body.appendChild(row);
+            let row = document.getElementById("a" + (question + 1));
             
             let radioBut = document.createElement('input');
             radioBut.setAttribute('type', 'radio');
