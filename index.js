@@ -23,15 +23,45 @@ function createRadio() {
     document.body.appendChild(x);
 }
 
+function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
+//Animals quiz content
+
 $.get("https://opentdb.com/api.php?amount=10&category=27&difficulty=medium", function(data){
-        $("#q1").text( 'Question 1: '+ data.results[0].question) 
-            if (data.results.length = 1) {
-                $("#q1a").text( 'A: '+ data.results[0].incorrect_answers[2])
-                $("#q1b").text( 'B: '+ data.results[0].correct_answer[0])
-            } else {
-                $("#q1a").text( 'A: '+ data.results[0].incorrect_answers[2])
-                $("#q1b").text( 'B: '+ data.results[0].correct_answer[0])
-                $("#q1c").text( 'C: '+ data.results[0].incorrect_answers[0])
-                $("#q1d").text( 'D: '+ data.results[0].incorrect_answers[1])
-            }
-    });
+    for (let question = 0; question < 10; question++) {
+
+        $("#q" + (question + 1)).text( 'Question ' + (question + 1) + ': ' + data.results[question].question) 
+       
+        let allAnswers = [data.results[question].correct_answer , data.results[question].incorrect_answers[0], data.results[question].incorrect_answers[1], data.results[question].incorrect_answers[2]]
+            //console.log(allAnswers)
+            shuffle(allAnswers)
+            //console.log(allAnswers)
+
+        for (let index = 0; index < 4; index++) {
+
+            let text = (index + 1) + '. ' + allAnswers[index];
+            let name = 'RadioButton'; // + (index + 1);
+            let id = data.results[0].question + index;
+
+            let row = document.createElement('div');
+            document.body.appendChild(row);
+            
+            let radioBut = document.createElement('input');
+            radioBut.setAttribute('type', 'radio');
+            radioBut.setAttribute('name', name);
+            radioBut.setAttribute('id', id);
+            row.appendChild(radioBut);
+          
+            let label = document.createElement('label');
+            label.setAttribute('for', id);
+            label.innerHTML = text;
+            row.appendChild(label);
+          }
+    }      
+});
