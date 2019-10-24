@@ -48,7 +48,7 @@ $.get("https://opentdb.com/api.php?amount=10&category=27&difficulty=medium&type=
         for (let index = 0; index < 4; index++) {
 
             let text = (index + 1) + '. ' + allAnswers[index];
-            let name = 'RadioButton' + question; // + (index + 1);
+            let name = 'RadioButton' + (question + 1); // + (index + 1);
             let id = data.results[question].question + index;
 
             let row = document.getElementById("a" + (question + 1));
@@ -62,22 +62,22 @@ $.get("https://opentdb.com/api.php?amount=10&category=27&difficulty=medium&type=
           
             let label = document.createElement('label');
             label.setAttribute('for', id);
+            label.setAttribute('id', id)
             label.innerHTML = text;
             row.appendChild(label);
           }
     } 
 
-/*
     document.getElementById("submit").onclick = function() {
         for (let question = 0; question < 10; question++) {
             document.getElementById("a" + (question + 1));
             let userChoice = $("#a" + (question + 1)).find("input:checked").val();
-            if userChoice == (data.results[question].question){
-                
+            let question_text = document.getElementById("q" + (question + 1));
+            if (userChoice == (data.results[question].correct_answer)){
+                question_text.style = "color: green;";
             } else {
-
+                question_text.style = "color: red;";
             };
         }
     }
-*/
 });
