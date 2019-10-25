@@ -165,7 +165,7 @@ $.get("https://opentdb.com/api.php?amount=10&category=25&type=multiple", functio
 })
 
 //Books quiz content
-$.get("https://opentdb.com/api.php?amount=10&category=25&type=multiple", function (data) {
+$.get("https://opentdb.com/api.php?amount=10&category=10&type=multiple", function (data) {
     for (let question = 0; question < 10; question++) {
         document.getElementById("booksq" + (question + 1)).innerHTML = ('Question ' + (question + 1) + ': ' + data.results[question].question)
 
@@ -230,7 +230,7 @@ $.get("https://opentdb.com/api.php?amount=10&category=25&type=multiple", functio
 
 
 //Film quiz content 
-$.get("https://opentdb.com/api.php?amount=10&category=25&type=multiple", function (data) {
+$.get("https://opentdb.com/api.php?amount=10&category=11&type=multiple", function (data) {
     for (let question = 0; question < 10; question++) {
         document.getElementById("filmq" + (question + 1)).innerHTML = ('Question ' + (question + 1) + ': ' + data.results[question].question)
 
@@ -295,7 +295,7 @@ $.get("https://opentdb.com/api.php?amount=10&category=25&type=multiple", functio
 
 
 //History quiz content 
-$.get("https://opentdb.com/api.php?amount=10&category=25&type=multiple", function (data) {
+$.get("https://opentdb.com/api.php?amount=10&category=23&type=multiple", function (data) {
     for (let question = 0; question < 10; question++) {
         document.getElementById("historyq" + (question + 1)).innerHTML = ('Question ' + (question + 1) + ': ' + data.results[question].question)
 
@@ -360,7 +360,7 @@ $.get("https://opentdb.com/api.php?amount=10&category=25&type=multiple", functio
 
 
 //Maths quiz content
-$.get("https://opentdb.com/api.php?amount=10&category=25&type=multiple", function (data) {
+$.get("https://opentdb.com/api.php?amount=10&category=19&type=multiple", function (data) {
     for (let question = 0; question < 10; question++) {
         document.getElementById("mathsq" + (question + 1)).innerHTML = ('Question ' + (question + 1) + ': ' + data.results[question].question)
 
@@ -425,7 +425,7 @@ $.get("https://opentdb.com/api.php?amount=10&category=25&type=multiple", functio
 
 
 //Sports quiz content sports
-$.get("https://opentdb.com/api.php?amount=10&category=25&type=multiple", function (data) {
+$.get("https://opentdb.com/api.php?amount=10&category=21&type=multiple", function (data) {
     for (let question = 0; question < 10; question++) {
         document.getElementById("sportsq" + (question + 1)).innerHTML = ('Question ' + (question + 1) + ': ' + data.results[question].question)
 
@@ -490,7 +490,7 @@ $.get("https://opentdb.com/api.php?amount=10&category=25&type=multiple", functio
 
 
 //Technology quiz content 
-$.get("https://opentdb.com/api.php?amount=10&category=25&type=multiple", function (data) {
+$.get("https://opentdb.com/api.php?amount=10&category=18&type=multiple", function (data) {
     for (let question = 0; question < 10; question++) {
         document.getElementById("technologyq" + (question + 1)).innerHTML = ('Question ' + (question + 1) + ': ' + data.results[question].question)
 
@@ -555,7 +555,7 @@ $.get("https://opentdb.com/api.php?amount=10&category=25&type=multiple", functio
 
 
 //Vehicles quiz content 
-$.get("https://opentdb.com/api.php?amount=10&category=25&type=multiple", function (data) {
+$.get("https://opentdb.com/api.php?amount=10&category=28&type=multiple", function (data) {
     for (let question = 0; question < 10; question++) {
         document.getElementById("vehiclesq" + (question + 1)).innerHTML = ('Question ' + (question + 1) + ': ' + data.results[question].question)
 
