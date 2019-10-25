@@ -20,7 +20,6 @@
     padding: 20px
 }
 
-
 .center {
     display: block;
     margin-left: auto;
@@ -63,7 +62,7 @@
 }
 
 .artCover {
-    background-image: url(https://artanddesigninspiration.com/wp-content/uploads/2017/08/the-persistence-of-memory.jpg):
+    background-image: url(https://artanddesigninspiration.com/wp-content/uploads/2017/08/the-persistence-of-memory.jpg);
 }
 
 .animalsCover {
